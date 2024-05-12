@@ -30,7 +30,9 @@ def set_motor_speed1(speed1):
 def set_motor_speed2(speed2):
     pwm2.ChangeDutyCycle(speed2)
 
-def forward(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
+def forward(tf, **kwargs):
+    speed1 = kwargs.get('speed1', DEFAULT_SPEED1)
+    speed2 = kwargs.get('speed2', DEFAULT_SPEED2)
     set_motor_speed1(speed1)
     set_motor_speed2(speed2)
     GPIO.output(INPUT1_PIN1, True)
@@ -41,7 +43,9 @@ def forward(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
     set_motor_speed1(0)
     set_motor_speed2(0)
 
-def reverse(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
+def reverse(tf, **kwargs):
+    speed1 = kwargs.get('speed1', DEFAULT_SPEED1)
+    speed2 = kwargs.get('speed2', DEFAULT_SPEED2)
     set_motor_speed1(speed1)
     set_motor_speed2(speed2)
     GPIO.output(INPUT1_PIN1, False)
@@ -52,7 +56,9 @@ def reverse(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
     set_motor_speed1(0)
     set_motor_speed2(0)
 
-def left(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
+def left(tf, **kwargs):
+    speed1 = kwargs.get('speed1', DEFAULT_SPEED1)
+    speed2 = kwargs.get('speed2', DEFAULT_SPEED2)
     set_motor_speed1(speed1)
     set_motor_speed2(speed2)
     GPIO.output(INPUT1_PIN1, True)
@@ -63,7 +69,9 @@ def left(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
     set_motor_speed1(0)
     set_motor_speed2(0)
 
-def right(tf, speed1=DEFAULT_SPEED1, speed2=DEFAULT_SPEED2):
+def right(tf, **kwargs):
+    speed1 = kwargs.get('speed1', DEFAULT_SPEED1)
+    speed2 = kwargs.get('speed2', DEFAULT_SPEED2)
     set_motor_speed1(speed1)
     set_motor_speed2(speed2)
     GPIO.output(INPUT1_PIN1, False)
