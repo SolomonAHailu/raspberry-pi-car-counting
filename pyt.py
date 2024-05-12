@@ -1,14 +1,19 @@
-# config.py
+# main.py
+import motor_control as mc
 
-# Motor 1 pins
-ENABLE_PIN1 = 24
-INPUT1_PIN1 = 16
-INPUT2_PIN1 = 12
+def main():
+    try:
+        mc.setup()
+        mc.set_motor_speed1(40)
+        mc.set_motor_speed2(80)
+        mc.forward(2)
+        mc.reverse(2)
+        mc.left(2)
+        mc.right(2)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        mc.cleanup()
 
-# Motor 2 pins
-ENABLE_PIN2 = 25
-INPUT1_PIN2 = 21
-INPUT2_PIN2 = 20
-
-# PWM Frequency
-PWM_FREQ = 100
+if __name__ == "__main__":
+    main()
