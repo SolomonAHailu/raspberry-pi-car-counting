@@ -1,15 +1,3 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 console.log("hello there.")
