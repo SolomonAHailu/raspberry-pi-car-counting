@@ -1,3 +1,1 @@
-
-s
-  console.log("hello there.")
+nsole.log("hello there.")
