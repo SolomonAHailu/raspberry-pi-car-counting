@@ -13,6 +13,7 @@
 
 
 
+
 import RPi.GPIO as GPIO
 import time
 from config import ENABLE_PIN1, INPUT1_PIN1, INPUT2_PIN1, ENABLE_PIN2, INPUT1_PIN2, INPUT2_PIN2, PWM_FREQ
