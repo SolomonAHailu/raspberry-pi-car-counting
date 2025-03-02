@@ -21,7 +21,7 @@ class Tracker:
             cy = (y + y + h) // 2
 
             # Find out if that object was detected already
-            same_object_detected = False
+            same_object_detected = False # false initially
             for id, pt in self.center_points.items():
                 dist = math.hypot(cx - pt[0], cy - pt[1])
 
