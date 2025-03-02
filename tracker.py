@@ -36,7 +36,7 @@ class Tracker:
             if same_object_detected is False:
                 self.center_points[self.id_count] = (cx, cy)
                 objects_bbs_ids.append([x, y, w, h, self.id_count])
-                self.id_count += 1
+                self.id_count += 1 # increment by one
 
         # Clean the dictionary by center points to remove IDS not used anymore
         new_center_points = {}
