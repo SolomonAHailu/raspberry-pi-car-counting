@@ -12,7 +12,7 @@ class Tracker:
 
     def update(self, objects_rect):
         # Objects boxes and ids
-        objects_bbs_ids = []
+        objects_bbs_ids = [] # empty list
 
         # Get center point of new object
         for rect in objects_rect:
