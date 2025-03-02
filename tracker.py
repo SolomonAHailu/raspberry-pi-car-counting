@@ -39,7 +39,7 @@ class Tracker:
                 self.id_count += 1 # increment by one
 
         # Clean the dictionary by center points to remove IDS not used anymore
-        new_center_points = {}
+        new_center_points = {} # empty dictionary
         for obj_bb_id in objects_bbs_ids:
             _, _, _, _, object_id = obj_bb_id
             center = self.center_points[object_id]
